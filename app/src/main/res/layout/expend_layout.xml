@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:rowCount="5"
+    android:columnCount="2"
+    android:layout_weight="1">
+    <!--补充运算符区域-->
+    <Button
+        android:id="@+id/left_parenthese"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:text="@string/left_parenthese" />
+
+    <Button
+        android:id="@+id/right_parenthese"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/right_parenthese" />
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/log" />
+
+    <Button
+        android:id="@+id/ln"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:textAllCaps="false"
+        android:text="@string/ln" />
+
+    <Button
+        android:id="@+id/x"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/x" />
+
+    <Button
+        android:id="@+id/cube"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/cube" />
+
+    <Button
+        android:id="@+id/sin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/sin" />
+
+    <Button
+        android:id="@+id/cos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/cos" />
+
+    <Button
+        android:id="@+id/tan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/tan" />
+
+    <Button
+        android:id="@+id/DRG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="@string/DRG" />
+
+</GridLayout>
