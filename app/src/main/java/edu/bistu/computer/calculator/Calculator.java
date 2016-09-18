@@ -1,15 +1,13 @@
 package edu.bistu.computer.calculator;
 
-import android.widget.TextView;
-
 import java.text.DecimalFormat;
 import java.util.StringTokenizer;
 
 /*
      * 整个计算核心，
-     * 只要将表达式的整个字符串传入calc().process()就可以实行计算了 算法包括以下几部分：
+     * 只要将表达式的整个字符串传入new Calculator().process()就可以实行计算了 算法包括以下几部分：
      *  1、计算部分
-     * process(String str) 当然，这是建立在查错无错误的情况下
+     * process(String str,String str_old,boolean drg_flag) 当然，这是建立在查错无错误的情况下
      * 2、数据格式化 FP(double n) 使数据有相当的精确度
      * 3、阶乘算法 N(double n) 计算n!，将结果返回
      *  4、错误提示 showError(int code ,String str)
@@ -18,8 +16,6 @@ import java.util.StringTokenizer;
 public class Calculator {
 
     private double pi = 4 * Math.atan(1);
-
-    private TextView tip;
 
     public Calculator() {
     }
@@ -31,7 +27,7 @@ public class Calculator {
      * +-基本优先级为1，
      * ×÷基本优先级为2，
      * log ln sin cos tan n!基本优先级为3，
-     * ^基本优先级为
+     * ^基本优先级为4
      * 括号内层运算符比外层同级运算符优先级高4
      * 当前运算符优先级高于栈顶压栈，
      * 低于栈顶弹出一个运算符与两个数进行运算
@@ -46,7 +42,7 @@ public class Calculator {
         int weight[]; // 保存operator栈中运算符的优先级，以topOp计数
         double number[]; // 保存数字，以topNum计数
         char ch, ch_gai, operator[];// operator[]保存运算符，以topOp计数
-        String num;// 记录数字，str以+-×÷()sctgl!√^分段，+-×÷()sctgl!√^字符之间的字符串即为数字
+        String num;// 记录数字，str以+-×÷()sctgl!^分段，+-×÷()sctgl!^字符之间的字符串即为数字
         weight = new int[MAXLEN];
         number = new double[MAXLEN];
         operator = new char[MAXLEN];
